@@ -20,7 +20,10 @@ function Location({cities, location, updateLocation}){
 
 function renderLocation(city, weather){
     return(
-        <div className="card" >
+        <div className= "centre">
+        <div className="card-location" >
+        <h3 className ="location-title">Your location's weather</h3>
+
       <div className="img-container">
         <img
           className="card-img-top"
@@ -30,10 +33,11 @@ function renderLocation(city, weather){
         />
       </div>
       <div className="card-body">
-        <h3 className="card-title">{city.city}</h3>
+        <h3 className="card-title">The weather in {city.city} is</h3>
         <h5 className="card-text">{city.temperature}</h5>
-        <h5 className="card-text">{city.forecast}</h5>
+        <h5 className="card-text">It is {city.forecast.toLowerCase()} today </h5>
       </div>
+    </div>
     </div>
     )
 }
